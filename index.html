@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Ruthob 2026 - Batch I</title>
     <style>
+        /* Palet Warna Baru (Date Brown/Gold)
+           Dark Brown: #764C1E
+           Golden Brown: #A97B40
+           Accent/Featured: #D47A00
+        */
+        
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +21,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* Ganti gradient ungu/biru dengan cokelat/emas */
+            background: linear-gradient(135deg, #A97B40 0%, #764C1E 100%); 
         }
 
         .container {
@@ -29,6 +36,14 @@
             padding: 60px 20px;
             color: white;
             animation: fadeInDown 1s ease;
+        }
+        
+        /* Gaya baru untuk Logo */
+        .logo {
+            max-width: 150px; 
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px; /* Opsional: beri sedikit lengkungan */
         }
 
         header h1 {
@@ -45,7 +60,8 @@
 
         .badge {
             display: inline-block;
-            background: #ff6b6b;
+            /* Warna badge diganti */
+            background: #D47A00; 
             color: white;
             padding: 10px 30px;
             border-radius: 50px;
@@ -67,7 +83,8 @@
         }
 
         .section h2 {
-            color: #667eea;
+            /* Warna judul diganti */
+            color: #764C1E; 
             font-size: 2.2em;
             margin-bottom: 30px;
             text-align: center;
@@ -83,7 +100,8 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            /* Ganti gradient pada garis bawah judul */
+            background: linear-gradient(90deg, #A97B40, #764C1E); 
             border-radius: 2px;
         }
 
@@ -105,12 +123,273 @@
 
         .type-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+            /* Sesuaikan warna shadow dengan warna baru */
+            box-shadow: 0 15px 30px rgba(118, 76, 30, 0.4); 
         }
 
         .type-card h3 {
-            color: #667eea;
+            /* Warna judul card diganti */
+            color: #764C1E; 
             font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .type-card .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .package-card {
+            background: white;
+            /* Warna border diganti */
+            border: 3px solid #764C1E; 
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+            /* Sesuaikan warna shadow dengan warna baru */
+            box-shadow: 0 10px 30px rgba(118, 76, 30, 0.3);
+        }
+
+        .package-card.featured {
+            /* Warna featured diganti */
+            border-color: #D47A00; 
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe5e0 100%);
+        }
+
+        .package-card.featured .label {
+            /* Warna label diganti */
+            background: #D47A00; 
+            color: white;
+            padding: 5px 20px;
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .package-card h3 {
+            /* Warna judul card diganti */
+            color: #764C1E; 
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .package-card.featured h3 {
+            /* Warna featured h3 diganti */
+            color: #D47A00; 
+        }
+
+        .package-card .weight {
+            font-size: 2em;
+            font-weight: bold;
+            /* Warna weight diganti */
+            color: #764C1E; 
+            margin: 15px 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            /* Ganti gradient ungu/biru dengan cokelat/emas */
+            background: linear-gradient(135deg, #A97B40 0%, #764C1E 100%); 
+            border-radius: 20px;
+            color: white;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-section h2:after {
+            display: none;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            
+            background: white;
+            /* Warna teks button default diganti */
+            color: #764C1E; 
+            margin: 5px; 
+            border: 2px solid white; /* Border untuk WA/FB buttons agar seragam */
+        }
+
+        .btn:hover {
+            /* Warna hover diganti */
+            background: #D47A00 !important; 
+            color: white !important;
+            transform: scale(1.1);
+            border-color: #D47A00 !important;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.9em;
+        }
+        /* ... (media queries dan keyframes tetap sama) ... */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.8em;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <img src="https://via.placeholder.com/150x100?text=LOGO+ANDA" alt="Ruthob Premium Logo" class="logo">
+            
+            <h1>🌙 Ruthob 2026 🌙</h1>
+            <p class="subtitle">Kurma Segar Berkualitas Premium</p>
+            <div class="badge">OPEN PRE-ORDER BATCH I</div>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Jenis Ruthob Premium</h2>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="icon">🌴</div>
+                        <h3>Ruthob Ajwa</h3>
+                        <p>Kurma premium dari Madinah dengan khasiat istimewa dan rasa manis alami yang khas</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon">✨</div>
+                        <h3>Ruthob Barhiy</h3>
+                        <p>Tekstur lembut dan rasa manis yang sempurna, sangat disukai untuk konsumsi segar</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon">🌟</div>
+                        <h3>Ruthob Sukariy</h3>
+                        <p>Rasa manis seperti karamel dengan tekstur yang lembut dan meleleh di mulut</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Pilihan Paket</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #666;">
+                    Untuk diri sendiri maupun hadiah istimewa
+                </p>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <h3>Taster/Starter</h3>
+                        <div class="weight">500gr</div>
+                        <p>Sempurna untuk mencoba pertama kali</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Family Pack</h3>
+                        <div class="weight">1kg</div>
+                        <p>Untuk keluarga tercinta</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Gift Box Trio</h3>
+                        <div class="weight">1,5kg</div>
+                        <p>Hadiah spesial dengan 3 varian</p>
+                    </div>
+                    <div class="package-card featured">
+                        <div class="label">LIMITED</div>
+                        <h3>Best Seller</h3>
+                        <div class="weight">750gr</div>
+                        <p><strong>Ajwa Premium</strong><br>Edisi Terbatas</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Paket Sedekah</h3>
+                        <div class="weight">📿</div>
+                        <p>Untuk Masjid & Madrasah</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Pemesanan Besar</h3>
+                        <div class="weight">5/10/15kg+</div>
+                        <p>Untuk Organisasi & Acara<br><small>*Tersedia permintaan khusus</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Manisnya Sunnah, Indahnya Berkongsi</h2>
+            <p>Buruan pesan sebelum kehabisan! 🌙</p>
+            
+            <a href="https://wa.me/6281215451255?text=Saya%20ingin%20pre-order%20Ruthob%202026%20Batch%20I." target="_blank" class="btn" style="background: #25D366; color: white;">Pesan via WhatsApp 📞</a>
+            
+            <a href="https://www.facebook.com/share/17aQa8Rrua/" target="_blank" class="btn" style="background: #4267B2; color: white;">Kunjungi Facebook 👥</a>
+        </div>
+
+        <footer>
+            <p>© 2026 Ruthob Premium | Kurma Segar Berkualitas Tinggi</p>
+        </footer>
+    </div>
+</body>
+</html>            font-size: 1.8em;
             margin-bottom: 15px;
         }
 
