@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Order Ruthob 2026 - Batch I</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            animation: fadeInDown 1s ease;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header .subtitle {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            animation: pulse 2s infinite;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 30px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .type-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .type-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .type-card .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .package-card {
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .package-card.featured {
+            border-color: #ff6b6b;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+        }
+
+        .package-card.featured .label {
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 20px;
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .package-card h3 {
+            color: #667eea;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .package-card.featured h3 {
+            color: #ff6b6b;
+        }
+
+        .package-card .weight {
+            font-size: 2em;
+            font-weight: bold;
+            color: #764ba2;
+            margin: 15px 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-section h2:after {
+            display: none;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff6b6b;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 Ruthob 2026 🌙</h1>
+            <p class="subtitle">Kurma Segar Berkualitas Premium</p>
+            <div class="badge">OPEN PRE-ORDER BATCH I</div>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Jenis Ruthob Premium</h2>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="icon">🌴</div>
+                        <h3>Ruthob Ajwa</h3>
+                        <p>Kurma premium dari Madinah dengan khasiat istimewa dan rasa manis alami yang khas</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon">✨</div>
+                        <h3>Ruthob Barhiy</h3>
+                        <p>Tekstur lembut dan rasa manis yang sempurna, sangat disukai untuk konsumsi segar</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon">🌟</div>
+                        <h3>Ruthob Sukariy</h3>
+                        <p>Rasa manis seperti karamel dengan tekstur yang lembut dan meleleh di mulut</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Pilihan Paket</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #666;">
+                    Untuk diri sendiri maupun hadiah istimewa
+                </p>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <h3>Taster/Starter</h3>
+                        <div class="weight">500gr</div>
+                        <p>Sempurna untuk mencoba pertama kali</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Family Pack</h3>
+                        <div class="weight">1kg</div>
+                        <p>Untuk keluarga tercinta</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Gift Box Trio</h3>
+                        <div class="weight">1,5kg</div>
+                        <p>Hadiah spesial dengan 3 varian</p>
+                    </div>
+                    <div class="package-card featured">
+                        <div class="label">LIMITED</div>
+                        <h3>Best Seller</h3>
+                        <div class="weight">750gr</div>
+                        <p><strong>Ajwa Premium</strong><br>Edisi Terbatas</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Paket Sedekah</h3>
+                        <div class="weight">📿</div>
+                        <p>Untuk Masjid & Madrasah</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Pemesanan Besar</h3>
+                        <div class="weight">5/10/15kg+</div>
+                        <p>Untuk Organisasi & Acara<br><small>*Tersedia permintaan khusus</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Manisnya Sunnah, Indahnya Berkongsi</h2>
+            <p>Buruan pesan sebelum kehabisan! 🌙</p>
+            <button class="btn" onclick="alert('Silakan hubungi kami untuk melakukan pre-order!')">Pre-Order Sekarang</button>
+        </div>
+
+        <footer>
+            <p>© 2026 Ruthob Premium | Kurma Segar Berkualitas Tinggi</p>
+        </footer>
+    </div>
+</body>
+</html>
