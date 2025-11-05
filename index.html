@@ -1,393 +1,405 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pre-Order Ruthob 2026 - Batch I</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Order Ruthob 2026 - Batch I</title>
+    <style>
+        /* Palet Warna Baru (Date Brown/Gold)
+           Dark Brown: #764C1E
+           Golden Brown: #A97B40
+           Accent/Featured: #D47A00
+        */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Font Awesome untuk ikon -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* Ganti gradient ungu/biru dengan cokelat/emas */
+            background: linear-gradient(135deg, #A97B40 0%, #764C1E 100%); 
+        }
 
-  <style>
-    :root {
-      --dark-brown: #764C1E;
-      --golden-brown: #A97B40;
-      --accent: #D47A00;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            animation: fadeInDown 1s ease;
+        }
+        
+        /* Gaya baru untuk Logo Utama (Diperbarui) */
+        .logo {
+            max-width: 200px; /* Lebar maksimal */
+            height: 150px; /* Tinggi tetap */
+            object-fit: contain; /* Agar gambar tidak terdistorsi */
+            margin-bottom: 20px;
+            border-radius: 10px; 
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, var(--golden-brown) 0%, var(--dark-brown) 100%);
-    }
+        /* --- CSS BARU untuk Ikon Gambar Ruthob --- */
+        .type-icon-img {
+            width: 80px; /* Ukuran ikon */
+            height: 80px;
+            object-fit: cover; /* Agar gambar mengisi penuh area */
+            border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+            margin-bottom: 15px;
+            border: 3px solid #D47A00; /* Border warna accent */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        /* -------------------------------------- */
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      color: white;
-      animation: fadeInDown 1s ease;
-    }
+        header .subtitle {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
 
-    /* === LOGO === */
-    .logo {
-      max-width: 150px;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 10px;
-    }
+        .badge {
+            display: inline-block;
+            /* Warna badge diganti */
+            background: #D47A00; 
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            animation: pulse 2s infinite;
+        }
 
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 30px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
 
-    header .subtitle {
-      font-size: 1.5em;
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
+        .section {
+            margin: 50px 0;
+        }
 
-    .badge {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 10px 30px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 1.1em;
-      animation: pulse 2s infinite;
-    }
+        .section h2 {
+            /* Warna judul diganti */
+            color: #764C1E; 
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
 
-    .main-content {
-      background: white;
-      border-radius: 20px;
-      padding: 50px;
-      margin: 30px 0;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
+        .section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            /* Ganti gradient pada garis bawah judul */
+            background: linear-gradient(90deg, #A97B40, #764C1E); 
+            border-radius: 2px;
+        }
 
-    .section {
-      margin: 50px 0;
-    }
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-    .section h2 {
-      color: var(--dark-brown);
-      font-size: 2.2em;
-      margin-bottom: 30px;
-      text-align: center;
-      position: relative;
-      padding-bottom: 15px;
-    }
+        .type-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
 
-    .section h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--golden-brown), var(--dark-brown));
-      border-radius: 2px;
-    }
+        .type-card:hover {
+            transform: translateY(-10px);
+            /* Sesuaikan warna shadow dengan warna baru */
+            box-shadow: 0 15px 30px rgba(118, 76, 30, 0.4); 
+        }
 
-    .types-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+        .type-card h3 {
+            /* Warna judul card diganti */
+            color: #764C1E; 
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
 
-    .type-card {
-      background: linear-gradient(135deg, #fff8f0 0%, #f2e2c6 100%);
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
+        .type-card .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
 
-    .type-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(118, 76, 30, 0.4);
-    }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-    .type-card .icon {
-      font-size: 4em;
-      margin-bottom: 15px;
-    }
+        .package-card {
+            background: white;
+            /* Warna border diganti */
+            border: 3px solid #764C1E; 
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .type-card h3 {
-      color: var(--dark-brown);
-      font-size: 1.8em;
-      margin-bottom: 15px;
-    }
+        .package-card:hover {
+            transform: scale(1.05);
+            /* Sesuaikan warna shadow dengan warna baru */
+            box-shadow: 0 10px 30px rgba(118, 76, 30, 0.3);
+        }
 
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
+        .package-card.featured {
+            /* Warna featured diganti */
+            border-color: #D47A00; 
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe5e0 100%);
+        }
 
-    .package-card {
-      background: white;
-      border: 3px solid var(--dark-brown);
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
+        .package-card.featured .label {
+            /* Warna label diganti */
+            background: #D47A00; 
+            color: white;
+            padding: 5px 20px;
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            font-size: 0.9em;
+            font-weight: bold;
+        }
 
-    .package-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(118, 76, 30, 0.3);
-    }
+        .package-card h3 {
+            /* Warna judul card diganti */
+            color: #764C1E; 
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
 
-    .package-card.featured {
-      border-color: var(--accent);
-      background: linear-gradient(135deg, #fff5f0 0%, #ffe5e0 100%);
-    }
+        .package-card.featured h3 {
+            /* Warna featured h3 diganti */
+            color: #D47A00; 
+        }
 
-    .package-card.featured .label {
-      background: var(--accent);
-      color: white;
-      padding: 5px 20px;
-      position: absolute;
-      top: 20px;
-      right: -30px;
-      transform: rotate(45deg);
-      font-size: 0.9em;
-      font-weight: bold;
-    }
+        .package-card .weight {
+            font-size: 2em;
+            font-weight: bold;
+            /* Warna weight diganti */
+            color: #764C1E; 
+            margin: 15px 0;
+        }
 
-    .package-card h3 {
-      color: var(--dark-brown);
-      font-size: 1.6em;
-      margin-bottom: 15px;
-    }
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            /* Ganti gradient ungu/biru dengan cokelat/emas */
+            background: linear-gradient(135deg, #A97B40 0%, #764C1E 100%); 
+            border-radius: 20px;
+            color: white;
+            margin: 50px 0;
+        }
 
-    .package-card.featured h3 {
-      color: var(--accent);
-    }
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: white;
+        }
 
-    .package-card .weight {
-      font-size: 2em;
-      font-weight: bold;
-      color: var(--dark-brown);
-      margin: 15px 0;
-    }
+        .cta-section h2:after {
+            display: none;
+        }
 
-    .cta-section {
-      text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, var(--golden-brown) 0%, var(--dark-brown) 100%);
-      border-radius: 20px;
-      color: white;
-      margin: 50px 0;
-    }
+        .cta-section p {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
 
-    .cta-section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: white;
-    }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            
+            background: white;
+            /* Warna teks button default diganti */
+            color: #764C1E; 
+            margin: 5px; 
+            border: 2px solid white; /* Border untuk WA/FB buttons agar seragam */
+        }
 
-    .cta-section p {
-      font-size: 1.3em;
-      font-style: italic;
-      margin-bottom: 30px;
-    }
+        .btn:hover {
+            /* Warna hover diganti */
+            background: #D47A00 !important; 
+            color: white !important;
+            transform: scale(1.1);
+            border-color: #D47A00 !important;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 40px;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 1.2em;
-      transition: all 0.3s ease;
-      border: 2px solid white;
-      cursor: pointer;
-      margin: 5px;
-    }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.9em;
+        }
+        /* ... (media queries dan keyframes tetap sama) ... */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .btn:hover {
-      background: var(--accent) !important;
-      color: white !important;
-      transform: scale(1.1);
-      border-color: var(--accent) !important;
-    }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: white;
-      font-size: 0.9em;
-    }
-
-    /* Tombol WhatsApp melayang */
-    .wa-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 100;
-      transition: all 0.3s ease;
-    }
-
-    .wa-float:hover {
-      transform: scale(1.1);
-      background-color: #1ebe57;
-    }
-
-    .my-float {
-      margin-top: 15px;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2em; }
-      .main-content { padding: 30px 20px; }
-      .section h2 { font-size: 1.8em; }
-      .btn { display: block; margin: 10px auto; }
-    }
-  </style>
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.8em;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <!-- LOGO SUDAH AKTIF -->
-      <img src="attawasol_logo.png" alt="Logo Attawasol" class="logo">
+    <div class="container">
+        <header>
+            
+            <img src="https://assets-prd.ignimgs.com/2023/07/03/dates-1688390918115.jpeg" alt="Ruthob Premium Logo" class="logo">
+            
+            <h1>🌙 Ruthob 2026 🌙</h1>
+            <p class="subtitle">Kurma Segar Berkualitas Premium</p>
+            <div class="badge">OPEN PRE-ORDER BATCH I</div>
+        </header>
 
-      <h1>🌙 Ruthob 2026 🌙</h1>
-      <p class="subtitle">Kurma Segar Berkualitas Premium</p>
-      <div class="badge">OPEN PRE-ORDER BATCH I</div>
-    </header>
-
-    <div class="main-content">
-      <div class="section">
-        <h2>Jenis Ruthob Premium</h2>
-        <div class="types-grid">
-          <div class="type-card">
-            <div class="icon">🌴</div>
-            <h3>Ruthob Ajwa</h3>
-            <p>Kurma premium dari Madinah dengan khasiat istimewa dan rasa manis alami yang khas.</p>
-          <!-- Barhiy -->
-                <div class="type-card">
-                    <div class="icon">
-                        <img src="barhiy.jpeg" alt="Ruthob Barhiy">
+        <div class="main-content">
+            <div class="section">
+                <h2>Jenis Ruthob Premium</h2>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="icon">🌴</div>
+                        <h3>Ruthob Ajwa</h3>
+                        <p>Kurma premium dari Madinah dengan khasiat istimewa dan rasa manis alami yang khas</p>
                     </div>
-                    <h3>Ruthob Barhiy</h3>
-                    <p>Tekstur lembut dan rasa manis yang sempurna, sangat disukai untuk konsumsi segar</p>
+                    <div class="type-card">
+                        <img src="https://assets-prd.ignimgs.com/2023/07/03/dates-1688390918115.jpeg" alt="Ruthob Barhiy Icon" class="type-icon-img">
+                        <h3>Ruthob Barhiy</h3>
+                        <p>Tekstur lembut dan rasa manis yang sempurna, sangat disukai untuk konsumsi segar</p>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon">🌟</div>
+                        <h3>Ruthob Sukariy</h3>
+                        <p>Rasa manis seperti karamel dengan tekstur yang lembut dan meleleh di mulut</p>
+                    </div>
                 </div>
-          <div class="type-card">
-            <div class="icon">🕌</div>
-            <h3>Ruthob Sukariy</h3>
-            <p>Rasa manis seperti karamel dengan tekstur lembut dan meleleh di mulut.</p>
-          </div>
+            </div>
+
+            <div class="section">
+                <h2>Pilihan Paket</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #666;">
+                    Untuk diri sendiri maupun hadiah istimewa
+                </p>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <h3>Taster/Starter</h3>
+                        <div class="weight">500gr</div>
+                        <p>Sempurna untuk mencoba pertama kali</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Family Pack</h3>
+                        <div class="weight">1kg</div>
+                        <p>Untuk keluarga tercinta</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Gift Box Trio</h3>
+                        <div class="weight">1,5kg</div>
+                        <p>Hadiah spesial dengan 3 varian</p>
+                    </div>
+                    <div class="package-card featured">
+                        <div class="label">LIMITED</div>
+                        <h3>Best Seller</h3>
+                        <div class="weight">750gr</div>
+                        <p><strong>Ajwa Premium</strong><br>Edisi Terbatas</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Paket Sedekah</h3>
+                        <div class="weight">📿</div>
+                        <p>Untuk Masjid & Madrasah</p>
+                    </div>
+                    <div class="package-card">
+                        <h3>Pemesanan Besar</h3>
+                        <div class="weight">5/10/15kg+</div>
+                        <p>Untuk Organisasi & Acara<br><small>*Tersedia permintaan khusus</small></p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="section">
-        <h2>Pilihan Paket</h2>
-        <p style="text-align:center; margin-bottom:30px; font-size:1.1em; color:#666;">
-          Untuk diri sendiri maupun hadiah istimewa
-        </p>
-
-        <div class="packages-grid">
-          <div class="package-card">
-            <h3>Taster/Starter</h3>
-            <div class="weight">500gr</div>
-            <p>Sempurna untuk mencoba pertama kali.</p>
-          </div>
-          <div class="package-card">
-            <h3>Family Pack</h3>
-            <div class="weight">1kg</div>
-            <p>Untuk keluarga tercinta.</p>
-          </div>
-          <div class="package-card">
-            <h3>Gift Box Trio</h3>
-            <div class="weight">1.5kg</div>
-            <p>Hadiah spesial dengan 3 varian.</p>
-          </div>
-          <div class="package-card featured">
-            <div class="label">LIMITED</div>
-            <h3>Best Seller</h3>
-            <div class="weight">750gr</div>
-            <p><strong>Ajwa Premium</strong><br>Edisi Terbatas.</p>
-          </div>
-          <div class="package-card">
-            <h3>Paket Sedekah</h3>
-            <div class="weight">🧺</div>
-            <p>Untuk Masjid & Madrasah.</p>
-          </div>
-          <div class="package-card">
-            <h3>Pemesanan Besar</h3>
-            <div class="weight">5/10/15kg+</div>
-            <p>Untuk Organisasi & Acara.<br><small>*Tersedia permintaan khusus</small></p>
-          </div>
+        <div class="cta-section">
+            <h2>Manisnya Sunnah, Indahnya Berkongsi</h2>
+            <p>Buruan pesan sebelum kehabisan! 🌙</p>
+            
+            <a href="https://wa.me/6281215451255?text=Saya%20ingin%20pre-order%20Ruthob%202026%20Batch%20I." target="_blank" class="btn" style="background: #25D366; color: white;">Pesan via WhatsApp 📞</a>
+            
+            <a href="https://www.facebook.com/share/17aQa8Rrua/" target="_blank" class="btn" style="background: #4267B2; color: white;">Kunjungi Facebook 👥</a>
         </div>
-      </div>
+
+        <footer>
+            <p>© 2026 Ruthob Premium | Kurma Segar Berkualitas Tinggi</p>
+        </footer>
     </div>
-
-    <div class="cta-section">
-      <h2>Manisnya Sunnah, Indahnya Berkongsi</h2>
-      <p>Buruan pesan sebelum kehabisan! 🌙</p>
-
-      <a href="https://wa.me/6281215451255?text=Halo%2C%20saya%20ingin%20pesan%20Ruthob%202026." target="_blank" class="btn" style="background:#25D366; color:white;">
-        <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
-      </a>
-
-      <a href="https://www.facebook.com/share/17Z8TJb3Dy/" target="_blank" class="btn" style="background:#4267B2; color:white;">
-        <i class="fab fa-facebook-f"></i> Kunjungi Facebook
-      </a>
-    </div>
-
-    <footer>
-      <p>© 2026 Ruthob Premium | Kurma Segar Berkualitas Tinggi</p>
-    </footer>
-  </div>
-
-  <!-- Tombol WhatsApp melayang -->
-  <a href="https://wa.me/6281215451255?text=Halo%2C%20saya%20ingin%20pesan%20Ruthob%202026." class="wa-float" target="_blank">
-    <i class="fab fa-whatsapp my-float"></i>
-  </a>
 </body>
 </html>
